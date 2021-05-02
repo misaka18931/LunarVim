@@ -61,5 +61,8 @@ utils.define_augroups({
         {'FileType', 'lspinfo', 'nnoremap <silent> <buffer> q :q<CR>'},
         {'FileType', 'floaterm', 'nnoremap <silent> <buffer> q :q<CR>'},
     },
+	_dotfiles = {
+		{'BufWritePost', 'xmonad.hs', '!xmonad --recompile; xmonad --restart'}
+	},
     _auto_formatters = auto_formatters
 })
