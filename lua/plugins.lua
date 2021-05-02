@@ -46,7 +46,7 @@ return require("packer").startup(
 
         -- Debugging
         use {"mfussenegger/nvim-dap", opt = true}
-
+		use {"sakhnik/nvim-gdb", run = ":!./install.sh"}
         -- Autocomplete
         use {"hrsh7th/nvim-compe", opt = true}
         use {"hrsh7th/vim-vsnip", opt = true}
@@ -80,6 +80,14 @@ return require("packer").startup(
         use {"glepnir/galaxyline.nvim", opt = true}
         use {"romgrk/barbar.nvim", opt = true}
 
+		-- git
+		use {'tpope/vim-fugitive', opt = true}
+
+		-- Terminal
+		use {'akinsho/nvim-toggleterm.lua', opt = true}
+
+		require_plugin('nvim-toggleterm.lua')
+		require_plugin('vim-fugitive')
         require_plugin("nvim-lspconfig")
         require_plugin("lspsaga.nvim")
         require_plugin("nvim-lspinstall")
